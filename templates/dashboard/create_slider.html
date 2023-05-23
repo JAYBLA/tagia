@@ -1,0 +1,46 @@
+{% extends 'dashboard/dashbase.html'%}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %} Create Slider {% endblock title %}
+
+
+
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.media}}
+            
+                    {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                    {% endfor %}
+                    <div class="form-group my-3">
+                        <label class="mb-2" for=""><b>Slider Title</b></label>
+                        {% render_field form.title class="form-control" placeholder="Write a Post title...." %}
+                        {% for error in form.title.errors %}
+                            <span class="help-block">{{ form.title.error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="mb-2" for=""><b>Description</b></label>
+                        {% render_field form.content class="form-control" placeholder="Slider Content Here........." %}
+                        {% for error in content.errors %}
+                            <span class="help-block">{{ form.content.error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="mb-2" for=""><b>Slider Image</b></label><br>
+                        {% render_field form.photo class="form-control" %}
+                        {% for error in form.photo.errors %}
+                            <span class="help-block">{{ form.photo }}</span>
+                        {% endfor %}
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-check-square-o"></i> Create</button>
+                  </form>
+            </div>
+        </div>
+      </div>
+{% endblock content  %}

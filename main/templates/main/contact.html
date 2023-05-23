@@ -1,0 +1,90 @@
+{% extends 'main/base-inner.html' %}
+
+
+{% block stylesheet %}
+    
+{% endblock stylesheet %}
+    
+
+
+{% block content %}
+<section class="content-inner bg-light">    
+</section>
+
+<!-- Contact US -->
+<section class="content-inner bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 m-b30">
+                <div class="section-head style-1">
+                    <h6 class="sub-title text-secondary">CONTACT US</h6>
+                    <h2 class="title">Get In Touch With Us</h2>
+                </div>
+                <div class="icon-bx-wraper left m-b40 style-7">
+                    <div class="icon-bx-sm">
+                        <span class="icon-cell text-secondary">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                    </div>
+                    <div class="icon-content">
+                        <h4 class="dz-title">Call Now</h4>
+                        <p>Company Call Center</p>
+                    </div>
+                </div>
+                <div class="icon-bx-wraper left style-7">
+                    <div class="icon-bx-sm">
+                        <span class="icon-cell text-secondary">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </div>
+                    <div class="icon-content">
+                        <h4 class="dz-title">Email Address</h4>
+                        <p><a href="mailto:info@tagia.co.tz">info@tagia.co.tz</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 m-b30">
+                <div class="contact-area">
+                    <div class="card p-3">
+                        <form method="POST" action="<?= base_url()?>/contact">
+                            <div class="row sp10">
+                                <div class="col-sm-12 m-b20">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="full_name"
+                                            placeholder="Full Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 m-b20">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 m-b20">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="phone" placeholder="Phone No.">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 m-b20">
+                                    <div class="input-group">
+                                        <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button name="submit" type="submit" value="submit"
+                                        class="btn btn-primary btn-rounded">SUBMIT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+{% endblock content %}
+    
+
+{% block javascript %}
+
+{% endblock javascript %}
+    

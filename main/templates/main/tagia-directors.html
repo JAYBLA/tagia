@@ -1,0 +1,40 @@
+{% extends 'main/base-inner.html' %}
+
+{% block stylesheet %}
+            
+{% endblock stylesheet %}
+                
+            
+{% block content %}
+<!-- Team -->
+<section class="content-inner mt-5">
+    <div class="container">
+        <div class="section-head style-1 text-center">                        
+            <h2 class="title">Board Of Directors</h2>
+        </div>
+        <div class="row">            
+            <div class="col-md-3 mb-3">
+            <div class="swiper-slide ">
+                    <div class="dz-team style-1 text-center overlay-shine aos-item" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <div class="dz-media shareholder-inner-container">
+                            <img src="#" alt="image">
+                        </div>
+                        <div class="dz-content shareholder-info">
+                            <h4 class="dz-name">{{Name}}</h4>
+                            <h6 class="text-light">{{occupation}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>
+{% endblock content %}
+                
+            
+            
+{% block javascript %}
+
+{% endblock javascript %}
+

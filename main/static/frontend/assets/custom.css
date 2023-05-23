@@ -1,0 +1,25 @@
+.tagia-slider1{
+  background-image:url(../../frontend/images/main-slider/slide1.jpg);
+}
+
+.tagia-slider2{
+  background-image:url(../../frontend/images/main-slider/slide2.jpg);
+}
+
+.tagia-slider3{
+  background-image:url(../../frontend/images/main-slider/slide3.jpg);
+}
+  .swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: #0278dc !important;
+    color: #fff;
+    font-size: 1em;
+}
+
+.content{
+  margin-right: 10% !important;
+}
+
+

@@ -1,0 +1,11 @@
+:root {
+	--primary:#1f3b70;
+	--primary-dark: #0b244c;
+	--secondary: #e1382d;
+  --font-family-base: Roboto, sans-serif;
+  --border-radius-base: 4px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 30px;
+  --font-family-title: Rubik, sans-serif;
+  --title: #051136;
+}

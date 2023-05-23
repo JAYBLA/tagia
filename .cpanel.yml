@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/miafocot/miafoCo/
+    - /bin/cp -R miafoCo $DEPLOYPATH

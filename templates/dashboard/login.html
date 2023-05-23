@@ -1,0 +1,79 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Edukea Admin Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<!-- Favicon icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+
+
+
+	<!-- vendor css -->
+	<link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'universal/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- toastr -->
+    <link rel="stylesheet" href="{% static 'universal/css/toastr.min.css' %}" media="all">
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<!-- [ auth-signin ] start -->
+<div class="auth-wrapper">
+	<div class="container">
+		<div class="card">
+			<div class="row align-items-center text-center">
+				<div class="col-md-12">
+					<div class="card-body">
+						<img src="{% static 'admins/images/logo.png' %}" alt="" class="img-fluid mb-4">
+						<h4 class="mb-3 f-w-400">Admin Signin</h4>
+						<form action="" method="post">
+							{% csrf_token %}
+
+							{% if form.non_field_errors %}
+							{% for error in form.non_field_errors %}
+								<div class="alert alert-danger alert-dismissible fade show">
+								{{ error }}
+								</div>
+								{% endfor %}
+							{% endif %}
+							<div class="input-group mb-3">
+								<span class="input-group-text"><i data-feather="mail"></i></span>
+								{% render_field form.username class="form-control" placeholder=form.username.label %}
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text"><i data-feather="lock"></i></span>
+								{% render_field form.password class="form-control" placeholder=form.password.label %}
+							</div>
+							<button class="btn btn-block btn-blue mb-4" type="submit">Signin</button>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [ auth-signin ] end -->
+
+<!-- Required Js -->
+<script src="{% static 'universal/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'universal/js/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'universal/js/toastr.min.js' %}"></script>
+</body>
+
+</html>

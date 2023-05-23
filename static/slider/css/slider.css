@@ -1,0 +1,328 @@
+.banner {
+    overflow: hidden;
+}
+.banner .slider {
+    padding-top: 124px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+.banner .slider:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.banner .slider .banner-txt {
+    padding: 180px 0 0;
+    bottom: 0 !important;
+}
+
+.banner .slider .banner-txt h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+    color: #ffffff;   
+    margin-bottom: 5px;
+    z-index: 1;
+}
+
+.banner .slider .banner-txt p {
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 36px;
+    z-index: 1;
+}
+.banner .owl-dots {
+    position: relative;
+    width: 1200px;
+    padding: 0 15px;
+    margin: -122px auto 98px;
+    z-index: 3;
+}
+.banner .owl-dots .owl-dot {
+    width: 12px;
+    height: 12px;
+    background: #f45905;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.banner .owl-dots .owl-dot:last-child {
+    margin-right: 0;
+}
+.banner .owl-dots .owl-dot.active {
+    background: #fff;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .heading {
+        margin-bottom: 50px;
+    }
+    .heading h2 {
+        font-size: 40px;
+        line-height: 48px;
+        padding-bottom: 16px;
+    }
+    .heading-2 {
+        margin-bottom: 50px;
+    }
+    .heading-2 h2 {
+        font-size: 35px;
+        margin-bottom: 19px;
+    }
+    .heading-2 p br {
+        display: none;
+    }
+    .banner .slider .banner-txt h1 {
+        font-size: 40px;
+        line-height: 48px;
+        margin-top: -5px;
+        margin-bottom: 21px;
+    }
+    .banner .slider .banner-txt p {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 31px;
+    }
+    .banner .owl-dots {
+        width: 960px;
+    } 
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .heading {
+        margin-bottom: 40px;
+    }
+    .heading h2 {
+        font-size: 30px;
+        line-height: 38px;
+        margin-top: -5px;
+        padding-bottom: 14px;
+    }
+    .heading-2 {
+        margin-bottom: 50px;
+    }
+    .heading-2 h2 {
+        font-size: 30px;
+        margin-top: -1px;
+        margin-bottom: 19px;
+    }
+    .heading-2 p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: -8px;
+    }    
+    .banner .slider {
+        padding-top: 111px;
+    }
+    .banner .slider:after {
+        top: 50px;
+        background-position-x: 15%;
+    }
+    .banner .slider .banner-txt {
+        padding: 100px 0;
+    }
+    .banner .slider .banner-txt h1 {
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: -4px;
+        margin-bottom: 14px;
+    }
+    .banner .slider .banner-txt p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+    .banner .owl-dots {
+        margin: -82px auto 58px;
+        width: 720px;
+    }
+    .banner .owl-dots .owl-dot {
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+    }    
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+    .heading {
+        margin-bottom: 40px;
+    }
+    .heading h2 {
+        font-size: 25px;
+        line-height: 33px;
+        margin-top: -5px;
+        padding-bottom: 14px;
+    }
+    .heading-2 {
+        margin-bottom: 50px;
+    }
+    .heading-2 h2 {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 19px;
+    }
+    .heading-2 p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: -8px;
+    }
+    
+    .banner .slider {
+        padding-top: 50px;
+    }
+    .banner .slider:after {
+        top: 50px;
+        background-position-x: 15%;
+    }
+    .banner .slider .banner-txt {
+        padding: 80px 0;
+    }
+    .banner .slider .banner-txt h1 {
+        font-size: 27px;
+        line-height: 30px;
+        margin-top: -2px;
+        margin-bottom: 16px;
+    }
+    .banner .slider .banner-txt p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+    .banner .owl-dots {
+        margin: -82px auto 58px;
+        width: 540px;
+    }
+    .banner .owl-dots .owl-dot {
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+    }    
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+
+    .heading {
+        margin-bottom: 40px;
+    }
+    .heading h2 {
+        font-size: 25px;
+        line-height: 33px;
+        margin-top: -5px;
+        padding-bottom: 14px;
+    }
+    .heading-2 {
+        margin-bottom: 50px;
+    }
+    .heading-2 h2 {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 19px;
+    }
+    .heading-2 p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: -8px;
+    }
+    .banner .slider {
+        padding-top: 50px;
+    }
+    .banner .slider:after {
+        top: 50px;
+        background-position-x: 15%;
+    }
+    .banner .slider .banner-txt {
+        padding: 80px 0;
+    }
+    .banner .slider .banner-txt h1 {
+        font-size: 27px;
+        line-height: 30px;
+        margin-top: -2px;
+        margin-bottom: 16px;
+    }
+    .banner .slider .banner-txt p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+    .banner .owl-dots {
+        margin: -82px auto 58px;
+        width: 100%;
+    }
+    .banner .owl-dots .owl-dot {
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+    .heading {
+        margin-bottom: 40px;
+    }
+    .heading h2 {
+        font-size: 25px;
+        line-height: 33px;
+        margin-top: -5px;
+        padding-bottom: 14px;
+    }
+    .heading-2 {
+        margin-bottom: 50px;
+    }
+    .heading-2 h2 {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 19px;
+    }
+    .heading-2 p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: -8px;
+    }
+    
+    .banner .slider {
+        padding-top: 50px;
+    }
+    .banner .slider:after {
+        top: 50px;
+        background-position-x: 15%;
+    }
+    .banner .slider .banner-txt {
+        padding: 80px 0;
+    }
+    .banner .slider .banner-txt h1 {
+        font-size: 27px;
+        line-height: 30px;
+        margin-top: -2px;
+        margin-bottom: 16px;
+    }
+    .banner .slider .banner-txt p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+    .banner .owl-dots {
+        margin: -82px auto 58px;
+        width: 100%;
+    }
+    .banner .owl-dots .owl-dot {
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+    } 
+}
+
+@media screen and (max-width:768px){
+    .slider{
+        background-size: cover !important;
+    }
+}

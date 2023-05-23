@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="description" content="Tagia - Your Success is Our Happiness" />
+    <meta property="og:title" content="Tagia - Your Success is Our Happiness" />
+    <meta property="og:description" content="Tagia - Your Success is Our Happiness" />
+    <meta property="og:image" content="https://Tagia.dexignzone.com/xhtml/social-image.png" />
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Tagia - Your Success is Our Happiness</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Stylesheet -->
+    <link href="{% static 'frontend/assets/vendor/magnific-popup/magnific-popup.min.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="{% static 'frontend/assets/hccanvas/hc-offcanvas-nav.css' %}" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'frontend/assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/assets/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/assets/css/custom.css' %}">
+    <link rel="stylesheet" class="skin" href="{% static 'frontend/assets/css/skin/skin-1.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/assets/vendor/rangeslider/rangeslider.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/assets/vendor/switcher/switcher.css' %}">
+    
+    {% block stylesheet %}
+     
+    {% endblock stylesheet %}
+      
+</head>
+
+<body id="bg" class="theme-sharped">
+    <div class="page-wraper">
+        <!-- Header -->
+        {% include 'main/includes/header.html' %}
+        <!-- Header End -->
+
+        <div class="page-content bg-white">
+            
+            {% block content %}
+              
+            {% endblock content %}
+              
+        </div>
+        <!-- Footer -->
+        {% include 'main/includes/footer.html' %}
+        <!-- Footer End -->
+        <button class="scroltop icon-up" type="button"><i class="fa fa-arrow-up"></i></button>
+    </div>
+    <!-- JAVASCRIPT FILES ========================================= -->
+    <script src="{% static 'frontend/assets/js/jquery.min.js' %}"></script><!-- JQUERY.MIN JS -->
+    <script src="{% static 'frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- BOOTSTRAP.MIN JS -->
+    <script src="{% static 'frontend/assets/vendor/magnific-popup/magnific-popup.js' %}"></script>
+    <!-- MAGNIFIC POPUP JS -->
+    <script src="{% static 'frontend/assets/vendor/counter/waypoints-min.js' %}"></script><!-- WAYPOINTS JS -->
+    <script src="{% static 'frontend/assets/vendor/counter/counterup.min.js' %}"></script><!-- COUNTERUP JS -->
+    <script src="{% static 'frontend/assets/vendor/masonry/isotope.pkgd.min.js' %}"></script><!-- ISOTOPE -->
+    <script src="{% static 'frontend/assets/vendor/imagesloaded/imagesloaded.js' %}"></script><!-- IMAGESLOADED -->
+    <script src="{% static 'frontend/assets/vendor/masonry/masonry-4.2.2.js' %}"></script><!-- MASONRY -->
+    <script src="{% static 'frontend/assets/vendor/swiper/swiper-bundle.min.js' %}"></script><!-- OWL-CAROUSEL -->
+    <script src="{% static 'frontend/assets/vendor/aos/aos.js' %}"></script><!-- AOS -->
+    <script src="{% static 'frontend/assets/js/dz.carousel.js' %}"></script><!-- OWL-CAROUSEL -->
+    <script src="{% static 'frontend/assets/js/dz.ajax.js' %}"></script><!-- AJAX -->
+    <script src="{% static 'frontend/assets/js/custom.js' %}"></script><!-- CUSTOM JS -->
+    <script src="{% static 'frontend/assets/vendor/rangeslider/rangeslider.js' %}"></script><!-- RANGESLIDER -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{% static 'frontend/assets/hccanvas/hc-offcanvas-nav.js' %}"></script>
+
+    <script>
+    jQuery(document).ready(function($) {
+        $('#tagia-mobile-navigation').hcOffcanvasNav({
+            disableAt: 1024,
+            customToggle: $('.toggle'),
+            navTitle: 'Back',
+            levelTitleAsBack: true,
+            customToggle: '.tagia-mobile-toggle',
+        });
+    });
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,sw,',
+                    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+                },
+                'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+</body>
+
+</html>

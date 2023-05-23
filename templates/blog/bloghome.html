@@ -1,0 +1,105 @@
+{% extends 'blog/blogbase.html' %}
+{% load static %}
+
+{% block title %}
+    
+{% endblock title %}
+
+
+{% block stylesheet %}
+<style>
+    .image-container .card-img-top{
+        height: 250px;
+        object-fit: cover;
+        width:100%
+    }
+</style>
+{% endblock stylesheet %}
+
+
+{% block content %}
+          <!--Section: Content-->
+          <section class="text-center">
+            <h4 class="mb-5"><strong>News and Events</strong></h4>
+            <div class="row">
+                {% for post in posts %}
+              <div class="col-lg-4 col-md-12 mb-4">                 
+                <div class="card">
+                  <div class="bg-image hover-overlay ripple image-container" data-mdb-ripple-color="light">
+                    <img src="{{post.featured_image.url}}" class="card-img-top" />
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">
+                            {{post.content|truncatechars:200|safe |linebreaks}}
+                    </p>
+                    <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">Read More...</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+                            <!--Pagination-->
+                            {% if posts.paginator %}
+                            <nav aria-label="navigation">
+                                <ul class="pagination justify-content-center">
+                                {% if posts.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ questions.previous_page_number }}">Previous</a>
+                                </li>
+                                {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                {% endif %}
+                            
+                                {% if posts.number|add:'-4' > 1 %}
+                                <li class="page-item"><a class="page-link" href="?page={{ questions.number|add:'-5' }}">&hellip;</a></li>
+                                {% endif %}
+                            
+                                {% for i in posts.paginator.page_range %}
+                                {% if posts.number == i %}
+                                <li class="page-item active" aria-current="page">
+                                    <span class="page-link">
+                                    {{ i }}
+                                    <span class="sr-only">(current)</span>
+                                    </span>
+                                </li>
+                                {% elif i > posts.number|add:'-5' and i < posts.number|add:'5' %} <li class="page-item"><a class="page-link"
+                                    href="?page={{ i }}">{{ i }}</a></li>
+                                    {% endif %}
+                                    {% endfor %}
+                            
+                                    {% if posts.paginator.num_pages > posts.number|add:'4' %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ questions.number|add:'5' }}">&hellip;</a></li>
+                                    {% endif %}
+                            
+                                    {% if posts.has_next %}
+                                    <li class="page-item">
+                                    <a class="page-link" href="?page={{ questions.next_page_number }}">Next</a>
+                                    </li>
+                                    {% else %}
+                                    <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </nav>
+                            {% endif %}
+                            <!--end of Pagination-->
+            </div>
+
+          </section>
+          <!--Section: Content-->
+{% endblock content %}
+
+{% block javascript %}
+
+{% endblock javascript %}
+    
+    
+    
+    

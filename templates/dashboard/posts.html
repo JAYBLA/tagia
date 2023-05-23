@@ -1,0 +1,93 @@
+{% extends 'dashboard/dashbase.html'%}
+{% load static %}
+
+{% block title %} Create Post {% endblock title %}
+
+
+{% block stylesheet %}
+<style>
+    a, i{
+        cursor: pointer !important;
+    }
+
+    a{
+        text-decoration: none !important;
+    }
+</style>
+{% endblock stylesheet %}
+    
+
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="d-flex justify-content-end mt-3 me-4">
+                <a href="{% url 'dashboard:create_post' %}"><button  type="button" class="btn btn-outline-primary"><i class="fa fa-plus-circle"></i> Create Post</button></a>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped" id="data-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">Post Title</th>
+                        <th scope="col">Created Date</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for post in posts %}
+                      <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{post.title}}</td>
+                        <td>{{post.created_at}}</td>
+                        <td >
+                            <div class="d-inline">
+                                <a class="delete-post bs-modal ms-2" data-form-url="{% url 'dashboard:delete_post' post.id %}">
+                                    <i class="fa fa-trash text-danger" style="font-size: 22px;" ></i>
+                                </a>
+                                <a class="edit-post bs-modal ms-2" data-form-url="{% url 'dashboard:edit_post' post.id %}">
+                                    <i class="fa fa-pencil-square-o" style="font-size: 22px;" ></i>
+                                </a>
+                            </div>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+        <!-- Modal 1 with id="create-book"-->
+<div class="modal fade" id="create-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 2 with id="modal" -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+</div>
+{% endblock content  %}
+
+{% block javascript %}
+<script>
+    $(function () {
+  
+      $(".delete-post").each(function () {
+          $(this).modalForm({formURL: $(this).data("form-url"), isDeleteForm: true});
+      });
+  
+      $(".edit-post").each(function () {
+        $(this).modalForm({
+            formURL: $(this).data('form-url')
+        });
+      });
+  
+    });
+  </script>
+{% endblock javascript %}
+    
