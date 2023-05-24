@@ -86,8 +86,8 @@ def process_contact(request):
                 
             })
             plain_message = strip_tags(html_message)
-            from_email = "info@tagia.co.tz"
-            recipient_list = ['management@tagia.co.tz',]            
+            from_email = "management@tagia.co.tz"
+            recipient_list = ['info@tagia.co.tz',]            
             mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
 
             return JsonResponse({'msg': 'success'}, safe=False)
