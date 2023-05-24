@@ -27,8 +27,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool, default=False)
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['tagia.co.tz','www.tagia.co.tz','.tagia.co.tz']
-    GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
+    ALLOWED_HOSTS = ['tagia.co.tz','www.tagia.co.tz','.tagia.co.tz']    
     SECURE_SSL_REDIRECT=True
     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE=True
@@ -188,8 +187,8 @@ if not DEBUG:
         BASE_DIR / "static",
     ]
 
-    MEDIA_ROOT = '/home/miafocot/public_html/media'
-    STATIC_ROOT = '/home/miafocot/public_html/static'
+    MEDIA_ROOT = '/home/tagiacot/public_html/media'
+    STATIC_ROOT = '/home/tagiacot/public_html/static'
 else:
     STATICFILES_DIRS = [
         BASE_DIR / "static",
