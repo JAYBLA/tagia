@@ -1,0 +1,15 @@
+EMAILS CREATED
+
+Your account info@tagia.co.tz has been setup. In your e-mail program, use:
+Username:	info@tagia.co.tz
+Password:	27Db0izV
+POP/IMAP Server:	mail.tagia.co.tz
+SMTP Server:	mail.tagia.co.tz port 587
+
+
+
+Your account management@tagia.co.tz has been setup. In your e-mail program, use:
+Username:	management@tagia.co.tz
+Password:	WHb9tNZZM
+POP/IMAP Server:	mail.tagia.co.tz
+SMTP Server:	mail.tagia.co.tz port 587
