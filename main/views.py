@@ -64,36 +64,30 @@ def contact(request):
 def process_contact(request):
     if request.is_ajax():
         if request.method == 'POST':
-            first_name = request.POST['first_name'],
-            last_name = request.POST['last_name'],
-            phone = request.POST['phone_number'],
-            subject = request.POST['subject'],
+            full_name = request.POST['full_name'],
+            phone = request.POST['phone_number'],            
             email = request.POST['email'],
             message = request.POST['message']
             
             contact = Contact(
-                first_name=first_name,
-                last_name=last_name,
-                phone_number=phone,
-                subject=subject,
+                full_name=full_name,
+                phone_number=phone,                
                 email=email,
-                message=message
-                
+                message=message                
             )
             contact.save()
-            subject = 'Miafo Website Contact Form'
+            subject = 'Tagia Website Contact Form'
             
             html_message = render_to_string('main/mail_template.html', {
-                'first_name':first_name,
-                'last_name':last_name,
+                'full_name':full_name,                
                 'email': email,
                 'message': message,
-                'subject':subject,
                 'phone':phone,
                 
             })
             plain_message = strip_tags(html_message)
-            recipient_list = ['directormiraji@miafo.co.tz',]            
+            from_email = "info@tagia.co.tz"
+            recipient_list = ['management@tagia.co.tz',]            
             mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
 
             return JsonResponse({'msg': 'success'}, safe=False)

@@ -7,7 +7,7 @@ from bootstrap_modal_forms.forms import BSModalModelForm
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['first_name', 'last_name','phone_number','email','message', 'subject',]
+        fields = ['full_name', 'phone_number','email','message',]
 
 class SliderForm(forms.ModelForm):
     class Meta:

@@ -1,11 +1,9 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
-class Contact(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    phone_number = models.CharField(max_length=12)
-    subject = models.CharField(max_length=50)
+class Contact(models.Model):    
+    full_name = models.CharField(max_length=180)
+    phone_number = models.CharField(max_length=12)    
     email = models.EmailField()
     message = models.TextField()
     created_at =models.DateTimeField(auto_now_add=True)
