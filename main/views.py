@@ -12,18 +12,18 @@ from django.utils.html import strip_tags
 # Create your views here.
 def home(request):
     template_name = 'main/home.html'
-    posts = Post.objects.all().order_by('-created_at')
-    paginator = Paginator(posts, 6)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    sliders = Slider.objects.all().order_by('-created_at')
-    form = ContactForm()
-    context = {
-        'form':form,
-        'posts':page_obj,
-        'sliders':sliders,
-    }
-    return render(request,template_name,context)
+    # posts = Post.objects.all().order_by('-created_at')
+    # paginator = Paginator(posts, 6)
+    # page_number = request.GET.get('page')
+    # page_obj = paginator.get_page(page_number)
+    # sliders = Slider.objects.all().order_by('-created_at')
+    # form = ContactForm()
+    # context = {
+    #     'form':form,
+    #     'posts':page_obj,
+    #     'sliders':sliders,
+    # }
+    return render(request,template_name)
 
 def about(request):
     template_name = 'main/about.html'
