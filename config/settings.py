@@ -181,23 +181,17 @@ CKEDITOR_CONFIGS = {
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 if not DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / "static",
-    ]
-
-    MEDIA_ROOT = '/home/tagiacot/public_html/media'
-    STATIC_ROOT = '/home/tagiacot/public_html/static'
+    MEDIA_ROOT = '/home/jayblaco/tagia.co.tz/media'
+    STATIC_ROOT = '/home/jayblaco/tagia.co.tz/static'
 else:
-    STATICFILES_DIRS = [
-        BASE_DIR / "static",
-    ]
-    MEDIA_ROOT = 'media'
-    STATIC_ROOT = '/static'
-    
-    
-STATICFILES_DIRS = [BASE_DIR / 'static']
+    MEDIA_ROOT = 'media/' 
+
+
 LOGIN_REDIRECT_URL = 'dashboard:dashboard'
 LOGOUT_REDIRECT_URL = '/'
 
