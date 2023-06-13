@@ -27,7 +27,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool, default=False)
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['tagia.co.tz','www.tagia.co.tz','.tagia.co.tz','jayblagroup.com',]    
+    ALLOWED_HOSTS = ['tagia.co.tz','www.tagia.co.tz','.tagia.co.tz','jayblagroup.com','.jayblagroup.com','www.jayblagroup.com']    
     SECURE_SSL_REDIRECT=True
     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE=True
